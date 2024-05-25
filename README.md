@@ -1,7 +1,8 @@
 # KLOUD-CLI
 
-A lightweight pure Python3 CLI that supports public clouds in a simple and agnostic way
-
+A lightweight CLI that supports public clouds in a simple and agnostic way.  We proudly leverage the 
+[apache-libcloud](https://github.com/apache/libcloud) project under the covers to help mask the competing 
+complexities of vendor specifc API's.
 
 ## vocabulary
 
@@ -12,6 +13,7 @@ A lightweight pure Python3 CLI that supports public clouds in a simple and agnos
 
 - **VM**: A compute Virtual Machine
 
+## Installation (eventually)
 
-
+`pip install kloud-cli`
 
