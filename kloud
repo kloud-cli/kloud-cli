@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+#  Copyright 2024 Denis Lussier All rights reserved. #
+
+import os
+import sys
+
+import fire
+import provider
+
+os.chdir(os.path.dirname(__file__))
+
+arg_arr = sys.argv[2:]
+ARGS = ""
+for a in arg_arr:
+    ARGS = f"{ARGS} {a}"
+
+
+def provider(list=None):
+    """Supported Cloud Providers"""
+
+    os.system(f"python3 provider.py {ARGS}")
+
+
+def airport(list=None):
+    """International Airport Codes are used as Regions"""
+
+    os.system(f"python3 airport.py {ARGS}")
+
+
+def vm():
+    """Virtual Machines"""
+    pass
+
+
+def cluster():
+    """A group of VM's that works together"""
+    pass
+
+
+if __name__ == "__main__":
+    fire.Fire(
+        {
+            "provider": provider,
+            "airport":  airport,
+            "vm":       vm,
+            "cluster":  cluster,
+        }
+    )
